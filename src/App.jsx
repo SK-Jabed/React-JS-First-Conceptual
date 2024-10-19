@@ -1,4 +1,5 @@
 import './App.css'
+import Products from './components/Products/products'
 
 function App() {
 
@@ -6,7 +7,7 @@ function App() {
     <>
 
       <h2>Hello React</h2>
-
+      <Products></Products>
     </>
   )
 }
