@@ -1,18 +1,26 @@
 import { useEffect, useState } from 'react';
 import './App.css'
+import Products from './components/Products/products';
+import Services from './components/Services/Services';
 // import Product from './components/Product/Product'
 // import Products from './components/Products/products'
 
 function App() {
   const [state, setState] = useState(0);
 
-  // let storageVar = 0;
+  useEffect(() => {
+    // console.log("Hello Guys");
+  }, [state])
+
+  let storageVar = 0;
   
   const handleState = () => {
     const sum = state +1;
     // setState(state + 1)
     setState(sum);
   }
+
+
   const handleVariableCount = () => {   
     storageVar = storageVar + 1;
 
@@ -24,6 +32,13 @@ function App() {
   //   phone: "01863646515"
   // }
 
+  const [status, setStatus] = useState(false);
+
+  const handleStatus = () => {
+    // console.log(!status);
+    setStatus(!status)
+    console.log(status);
+  }
   
   
   return (
@@ -38,6 +53,13 @@ function App() {
       <br /> <br />
       <button onClick={handleVariableCount}>Change Variable Count</button>
       <h2>Hello React</h2>
+
+      <button onClick={handleStatus}>Status</button>
+
+      {
+        status ? <Products></Products> : <Services></Services>
+      }
+      
       {/* <Products info={information}></Products> */}
       {/* <Product></Product> */}
     </>

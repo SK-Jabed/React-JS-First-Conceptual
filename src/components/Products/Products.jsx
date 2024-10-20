@@ -7,7 +7,7 @@ export default function Products({info}) {
   return (
     <div>
         <h2>I am Products</h2>
-        <Product info={info}></Product>
+        {/* <Product info={info}></Product> */}
     </div>
   )
 }
