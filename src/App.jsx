@@ -20,10 +20,8 @@ function App() {
     setState(sum);
   }
 
-
   const handleVariableCount = () => {   
     storageVar = storageVar + 1;
-
     // storageVar += 1;
   }
 
@@ -39,19 +37,18 @@ function App() {
     setStatus(!status)
     console.log(status);
   }
-  
-  
+   
   return (
     <>
       <div>
       <h3>This is State Count {state}</h3>
       <h3>This is Variable Count {storageVar}</h3>
-
       </div>
 
       <button onClick={handleState}>Change State Count</button>
       <br /> <br />
       <button onClick={handleVariableCount}>Change Variable Count</button>
+
       <h2>Hello React</h2>
 
       <button onClick={handleStatus}>Status</button>
